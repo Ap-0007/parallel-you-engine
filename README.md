@@ -1,71 +1,55 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1a1b27&height=220&section=header&text=PARALLEL%20YOU%20ENGINE&fontSize=50&fontColor=e6edf3&fontAlignY=35&desc=Psychological%20Profiling%20%E2%80%A2%20Decision%20DNA%20%E2%80%A2%20Scenario%20Simulation&descSize=16&descAlignY=55&descColor=8b949e&animation=fadeIn" width="100%" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1a1b27&height=220&section=header&text=parallel-you-engine&fontSize=50&fontColor=e6edf3&fontAlignY=35&desc=Build%20your%20decision-making%20DNA.%20Then%20simulate%20what%20YOU%20would%20do.&descSize=15&descAlignY=55&descColor=8b949e&animation=fadeIn" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&labelColor=0d1117&color=0d1117" />
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=0d1117&color=0d1117" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white&labelColor=0d1117&color=0d1117" />
-  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white&labelColor=0d1117&color=0d1117" />
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logoColor=white&labelColor=0d1117&color=0d1117" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0d1117&color=0d1117" />
 </p>
 
 ---
 
 ## 🪞 What is this?
 
-**Parallel You Engine** builds a psychological model of *you* — then uses it to simulate what you'd do in any scenario you've never faced.
+**parallel-you-engine** is a two-phase system that answers: *what would I actually do in situation X?*
 
-It works in two phases:
+**Phase 1 — Profile:** An AI interviewer asks you a sequence of targeted questions about past decisions, values, and reasoning patterns. It builds your psychological decision-making profile.
 
-### Phase 1: The Interview
-The engine conducts a deep conversational interview, probing your values, fears, instincts, and decision-making patterns. It maps your cognitive biases, risk tolerance, emotional triggers, and moral boundaries.
+**Phase 2 — Simulate:** Given any scenario, the engine simulates what *you specifically* would do — not a generic person, but the decision-maker the interview revealed.
 
-### Phase 2: The Simulation
-Once your **decision-making DNA** is constructed, you can throw any scenario at it:
-
-> *"You discover your best friend has been lying to you for years. What do you do?"*
-
-The engine doesn't give you the *right* answer. It gives you *your* answer — the one that aligns with the psychological profile it built, including the rationalizations you'd use and the consequences you'd ignore.
-
-> *You already know what you'd do. This just proves it.*
+> *You don't simulate futures. You simulate yourself.*
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ Two-Phase Architecture
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│              PHASE 1: THE INTERVIEW 🎙️                   │
+│                  PHASE 1: THE INTERVIEW                  │
 │                                                          │
-│  ┌──────────────┐    ┌──────────────┐                   │
-│  │ Conversational│───▶│ Response     │                   │
-│  │ Probing      │    │ Analysis     │                   │
-│  └──────────────┘    └──────┬───────┘                   │
-│                             │                            │
-│  Questions adapt based on your answers                   │
-│  Values · Fears · Biases · Triggers mapped              │
-└─────────────────────────────┬────────────────────────────┘
-                              │
-                              ▼
+│  AI asks targeted questions about your past decisions:   │
+│  ├── "Describe a time you chose stability over risk"     │
+│  ├── "How do you weigh short vs long-term outcomes?"     │
+│  └── "What do you regret most about a past choice?"      │
+│                                                          │
+│  Builds your Decision DNA:                               │
+│  { risk_tolerance: 0.7, loss_aversion: 0.85,            │
+│    time_preference: "long", anchor_bias: "moderate" }   │
+└───────────────────────────────┬──────────────────────────┘
+                                │
+                                ▼
 ┌──────────────────────────────────────────────────────────┐
-│              🧬 DECISION DNA PROFILE                     │
+│                 PHASE 2: THE SIMULATION                  │
 │                                                          │
-│  ┌─────────┐ ┌────────────┐ ┌──────────┐ ┌───────────┐ │
-│  │ Values  │ │ Risk       │ │ Emotional│ │ Moral     │ │
-│  │ Matrix  │ │ Tolerance  │ │ Triggers │ │ Boundaries│ │
-│  └─────────┘ └────────────┘ └──────────┘ └───────────┘ │
-└─────────────────────────────┬────────────────────────────┘
-                              │
-                              ▼
-┌──────────────────────────────────────────────────────────┐
-│              PHASE 2: SCENARIO ENGINE 🎭                 │
+│  Input: Any scenario + your Decision DNA                 │
+│  Output: What YOU would likely do, and why               │
 │                                                          │
-│  Input: Any hypothetical scenario                        │
-│                                                          │
-│  ┌──────────────┐    ┌──────────────┐                   │
-│  │ Scenario     │───▶│ DNA-Weighted │───▶ YOUR response │
-│  │ Context      │    │ Simulation   │    + reasoning     │
-│  └──────────────┘    └──────────────┘    + blind spots   │
+│  "Given your profile, you would probably accept the      │
+│   offer but negotiate harder on equity than salary,      │
+│   because your loss aversion outweighs risk tolerance    │
+│   in high-uncertainty financial decisions."              │
 └──────────────────────────────────────────────────────────┘
 ```
 
@@ -74,12 +58,11 @@ The engine doesn't give you the *right* answer. It gives you *your* answer — t
 ## 🧱 Tech Stack
 
 | Layer | Technology | Purpose |
-|:------|:-----------|:--------|
-| **Frontend** | React | Interview UI + scenario simulation |
-| **Build** | Vite | Fast dev server & bundling |
-| **AI** | Ollama (Local LLM) | Profiling engine & simulation |
-| **Language** | JavaScript | Core application logic |
-| **Styling** | CSS | Custom interface design |
+|:---|:---|:---|
+| **Frontend** | React + Vite | Fast SPA, interview & simulation UI |
+| **AI** | Ollama (local LLM) | Interview + profile building + simulation |
+| **Language** | TypeScript | Type-safe profile schema |
+| **Styling** | CSS Modules | Component-scoped styles |
 
 ---
 
@@ -88,76 +71,40 @@ The engine doesn't give you the *right* answer. It gives you *your* answer — t
 ### Prerequisites
 
 ```bash
+# Install Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+ollama pull llama3.2
+
 node >= 18.0.0
-ollama           # Running locally with a model pulled
 ```
 
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/Ap-0007/parallel-you-engine.git
 cd parallel-you-engine
 
-# Install dependencies
 npm install
-
-# Start the development server
 npm run dev
-
-# Open in browser
-open http://localhost:5173
-```
-
-> Make sure Ollama is running with a model loaded before starting the app.
-
----
-
-## 📁 Project Structure
-
-```
-parallel-you-engine/
-├── public/                 # Static assets
-├── src/                    # Application source
-│   ├── components/         # React components
-│   │   ├── Interview/      # Phase 1: profiling interface
-│   │   └── Simulation/     # Phase 2: scenario engine
-│   ├── services/           # Ollama integration & profiling
-│   ├── utils/              # Helper functions
-│   ├── App.jsx             # Root component
-│   └── main.jsx            # Entry point
-├── index.html              # HTML template
-├── vite.config.js          # Vite configuration
-├── eslint.config.js        # ESLint configuration
-└── package.json            # Dependencies
+# App at http://localhost:5173
 ```
 
 ---
 
-## 🤝 Contributing
+## 🏛️ Philosophy
 
-If you're interested in personality modeling, cognitive science, or just want to know yourself better — PRs are welcome.
+Most decision tools give you frameworks. This gives you a mirror.
 
-```bash
-# Fork the repo
-# Create your feature branch
-git checkout -b feat/your-feature
+The goal isn't to tell you what's optimal. It's to show you what *you* would actually do — so you can decide if that's the person you want to be.
 
-# Commit your changes
-git commit -m "feat: add your feature"
+---
 
-# Push and open a PR
-git push origin feat/your-feature
-```
+## 🔗 Related
+
+- **[regret-simulator](https://github.com/Ap-0007/regret-simulator)** — run your parallel-you profile through 3-trajectory simulations
 
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-e6edf3?style=flat-square&labelColor=0d1117&color=161b22" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:58a6ff,60:1f6feb,100:0d1117&height=120&section=footer&animation=fadeIn" width="100%" />
 </p>
-
-<p align="center">
-  <sub>Built by <a href="https://github.com/Ap-0007">vanta.nox</a> · you already know what you'd do</sub>
-</p>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1a1b27&height=100&section=footer" width="100%" />
